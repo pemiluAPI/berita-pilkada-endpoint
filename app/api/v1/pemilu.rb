@@ -4,8 +4,8 @@ module Pemilu
     prefix 'api'
     format :json
 
-    resource :candidate do
-      desc "Return list of candidate"
+    resource :candidates do
+      desc "Return list of candidates"
       get do
         results = Candidate.apiall(params)
         {
@@ -14,8 +14,8 @@ module Pemilu
       end
     end
 
-    resource :region do
-      desc "Return list of region"
+    resource :regions do
+      desc "Return list of regions"
       get do
         results = Region.apiall(params)
         {
@@ -24,8 +24,8 @@ module Pemilu
       end
     end
 
-    resource :resource do
-      desc "Return list of resource"
+    resource :resources do
+      desc "Return list of resources"
       get do
         results = Resource.apiall(params)
         {
